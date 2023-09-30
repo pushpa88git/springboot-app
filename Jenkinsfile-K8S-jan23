@@ -1,7 +1,7 @@
-pipeline {
+Ipipeline {
     agent any
     tools {
-        maven "Maven3"
+        maven "maven3"
            }
 
     environment {
@@ -27,7 +27,7 @@ pipeline {
         stage ("Build image") {
             steps {
                 script {
-                    docker.build registryName
+                    dockerImage = docker.build registryName
                 }
             }
         }
